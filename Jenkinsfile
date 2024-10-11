@@ -20,7 +20,7 @@ pipeline {
                 script {
                     // Upload the new index.html from the repo to S3
                     sh """
-                        aws s3 cp ${LOCAL_INDEX_FILE} s3://${S3_BUCKET}/${S3_PATH} --acl public-read
+                        aws s3 cp ${LOCAL_INDEX_FILE} s3://${S3_BUCKET}/${S3_PATH}
                     """
                 }
             }
