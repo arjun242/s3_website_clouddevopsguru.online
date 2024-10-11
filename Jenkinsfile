@@ -3,8 +3,7 @@ pipeline {
 
     environment {
         S3_BUCKET = 'profile.clouddevopsguru.online'       // Your S3 bucket name
-        S3_PATH = 'index.html'                  // The path to index.html in S3
-        LOCAL_INDEX_FILE = 'index.html'         // Path to index.html in the cloned repo (adjust if it's in a folder)
+        CLOUDFRONT_ID = 'E2YBXRQBAS1AAE'
     }
 
     stages {
@@ -26,6 +25,16 @@ pipeline {
                     // Upload all .jpg, .jpeg, and .png files
                     sh """
                     aws s3 cp . s3://$S3_BUCKET/ --exclude "*" --include "*.jpg" --include "*.jpeg" --include "*.PNG" --recursive
+                    """
+                }
+            }
+        }
+        stage('Invalidate CloudFront Cache') {
+            steps {
+                script {
+                    // Invalidate CloudFront cache
+                    sh """
+                    aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_ID --paths "/index.html"
                     """
                 }
             }
