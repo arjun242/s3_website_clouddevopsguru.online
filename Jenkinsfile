@@ -34,7 +34,7 @@ pipeline {
                 script {
                     // Invalidate CloudFront cache
                     sh """
-                    aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_ID --paths "/index.html"
+                    aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_ID --paths "/*"
                     """
                 }
             }
