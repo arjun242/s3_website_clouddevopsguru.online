@@ -25,7 +25,7 @@ pipeline {
 
                     // Upload all .jpg, .jpeg, and .png files
                     sh """
-                    aws s3 cp . s3://$S3_BUCKET/ --exclude "*" --include "*.jpg" --include "*.jpeg" --include "*.png" --recursive
+                    aws s3 cp . s3://$S3_BUCKET/ --exclude "*" --include "*.jpg" --include "*.jpeg" --include "*.PNG" --recursive
                     """
                 }
             }
