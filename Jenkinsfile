@@ -18,9 +18,14 @@ pipeline {
         stage('Upload index.html to S3') {
             steps {
                 script {
-                    // Upload the new index.html from the repo to S3
+                    // Upload index.html
                     sh """
-                        aws s3 cp ${LOCAL_INDEX_FILE} s3://${S3_BUCKET}/${S3_PATH}
+                    aws s3 cp index.html s3://$S3_BUCKET/
+                    """
+
+                    // Upload all .jpg, .jpeg, and .png files
+                    sh """
+                    aws s3 cp . s3://$S3_BUCKET/ --exclude "*" --include "*.jpg" --include "*.jpeg" --include "*.png" --recursive
                     """
                 }
             }
