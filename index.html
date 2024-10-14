@@ -14,27 +14,35 @@
             margin: 0;
             padding: 20px;
         }
+
         header {
             text-align: center;
             padding: 50px;
             background-color: #2D2F33;
             color: white;
+            position: relative;
+            overflow: hidden;
         }
-        
+
         h1 {
             margin: 0;
             font-size: 2.5em;
         }
+
+        /* Adjusting the logo to fit inside the header and be responsive */
         img.logo {
-            width: 190px; /* Adjust size as needed */
-            position: absolute;
-            top: 20px;
-            left: 20px;
+            width: auto;
+            max-width: 20cap;
             height: auto;
+            position: absolute;
+            top: 2px;
+            left: 2px;
         }
+
         section {
             margin: 20px 0;
         }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -44,40 +52,73 @@
             bottom: 0;
             width: 100%;
         }
+
         .social-icons {
             margin-top: 10px;
         }
+
         .social-icons a {
             margin: 0 10px;
             color: rgb(32, 16, 137);
             text-decoration: none;
             font-size: 1.5em;
         }
+
         .knowledge-sources {
             margin: 20px 0;
             padding: 10px;
             background-color: #e7f3ff;
             border-left: 6px solid #0073e6;
         }
+
         .knowledge-sources h3 {
             margin-top: 0;
         }
+
         .knowledge-sources ul {
             list-style-type: none;
             padding: 0;
         }
+
         .knowledge-sources li {
             margin: 10px 0;
         }
+
         .knowledge-sources a {
             color: #0073e6;
             text-decoration: underline;
         }
+
         .knowledge-sources img {
-            width: 400px; /* Adjust the size of the images */
+            width: 100%;
+            max-width: 400px;
             height: auto;
-            /* vertical-align: middle; */
-            /* margin-right: 10px; Space between image and text */
+            margin-top: 10px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            img.logo {
+                max-width: 25%;
+                top: 15px;
+                left: 15px;
+            }
+
+            .social-icons a {
+                font-size: 1.3em;
+            }
+
+            .knowledge-sources img {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -111,27 +152,17 @@
         <ul>
             <li>
                 <h3>DevOps RACI Matrix</h3>
-                <p>
-                    This table demonstrates a differences between different roles w.r.to DevOps and Cloud. 
-                    For a complete explanation:
-                    <a href="https://www.linkedin.com/posts/techops-examples_digital-cloud-raci-matrix-in-the-raci-activity-7249323889325965312-UcNr?utm_source=share&utm_medium=member_android" target="_blank">
-                        DevOps RACI Matrix
-                    </a>
+                <p>This table demonstrates the differences between different roles regarding DevOps and Cloud. For a complete explanation:
+                    <a href="https://www.linkedin.com/posts/techops-examples_digital-cloud-raci-matrix-in-the-raci-activity-7249323889325965312-UcNr?utm_source=share&utm_medium=member_android" target="_blank">DevOps RACI Matrix</a>
                 </p>
                 <img src="https://s3.ap-south-1.amazonaws.com/profile.clouddevopsguru.online/devops_raci_matrix.jpg" alt="DevOps RACI Matrix">
             </li>
             <li>
-                <h3>Production Level CI/CD Pipeline </h3>
-                <p>
-                    This project demonstrates a full CI/CD pipeline for deploying a web application. 
-                    For a complete project: 
-                
-                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7230785386837422080?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7230785386837422080%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29" target="_blank">
-                        Production Level CI/CD Pipeline
-                    </a>
+                <h3>Production Level CI/CD Pipeline</h3>
+                <p>This project demonstrates a full CI/CD pipeline for deploying a web application. For a complete project: 
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7230785386837422080?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7230785386837422080%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29" target="_blank">Production Level CI/CD Pipeline</a>
                 </p>
                 <img src="https://s3.ap-south-1.amazonaws.com/profile.clouddevopsguru.online/prod_cicd_pipeline.PNG" alt="Production Level CI/CD Pipeline">
-
             </li>
         </ul>
     </div>
