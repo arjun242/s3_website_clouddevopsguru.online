@@ -14,35 +14,27 @@
             margin: 0;
             padding: 20px;
         }
-
-        /* Logo styling outside the header */
-        .logo-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .logo-container img {
-            width: auto;
-            max-width: 20%; /* Adjust the size as needed */
-            height: auto;
-        }
-
         header {
-            text-align: center;
-            padding: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
             background-color: #2D2F33;
             color: white;
         }
-
+        img.logo {
+            width: 190px; /* Adjust size as needed */
+            height: auto;
+            margin-right: 20px; /* Space between logo and header text */
+        }
         h1 {
             margin: 0;
             font-size: 2.5em;
+            text-align: center;
         }
-
         section {
             margin: 20px 0;
         }
-
         footer {
             text-align: center;
             padding: 20px;
@@ -52,102 +44,69 @@
             bottom: 0;
             width: 100%;
         }
-
         .social-icons {
             margin-top: 10px;
         }
-
         .social-icons a {
             margin: 0 10px;
             color: rgb(32, 16, 137);
             text-decoration: none;
             font-size: 1.5em;
         }
-
         .knowledge-sources {
             margin: 20px 0;
             padding: 10px;
             background-color: #e7f3ff;
             border-left: 6px solid #0073e6;
         }
-
         .knowledge-sources h3 {
             margin-top: 0;
         }
-
         .knowledge-sources ul {
             list-style-type: none;
             padding: 0;
         }
-
         .knowledge-sources li {
             margin: 10px 0;
         }
-
         .knowledge-sources a {
             color: #0073e6;
             text-decoration: underline;
         }
-
         .knowledge-sources img {
-            width: 100%;
-            max-width: 400px;
+            width: 400px; /* Adjust the size of the images */
             height: auto;
-            margin-top: 10px;
         }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            header {
-                padding: 30px;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            .logo-container img {
-                max-width: 30%; /* Resize logo for tablet-sized screens */
-            }
-
-            .social-icons a {
-                font-size: 1.3em;
-            }
-
-            .knowledge-sources img {
-                max-width: 100%;
-            }
+        .download-section {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #e7f3ff;
+            border-left: 6px solid #0073e6;
         }
-
-        @media (max-width: 480px) {
-            header {
-                padding: 20px;
-            }
-
-            h1 {
-                font-size: 1.5em;
-            }
-
-            .logo-container img {
-                max-width: 40%; /* Resize logo for mobile screens */
-            }
-
-            .social-icons a {
-                font-size: 1.2em;
-            }
+        .download-section h3 {
+            margin-top: 0;
+        }
+        .download-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .download-section li {
+            margin: 10px 0;
+        }
+        .download-section a {
+            color: #0073e6;
+            text-decoration: underline;
+        }
+        .download-icon {
+            margin-right: 8px; /* Space between icon and text */
         }
     </style>
 </head>
 <body>
 
-<!-- Logo outside the header -->
-<div class="logo-container">
-    <img src="https://profile.clouddevopsguru.online/logo_for_clouddevopsguru_website.jpeg" alt="CloudDevOpsGuru Logo">
-</div>
-
 <header>
+    <img src="https://profile.clouddevopsguru.online/logo_for_clouddevopsguru_website.jpeg" alt="CloudDevOpsGuru Logo" class="logo">
     <h1>Welcome to CloudDevOpsGuru Profile</h1>
-    <p>Your one-stop destination for DevOps resources and tutorials.</p>
 </header>
 
 <section>
@@ -172,18 +131,61 @@
         <ul>
             <li>
                 <h3>DevOps RACI Matrix</h3>
-                <p>This table demonstrates the differences between different roles regarding DevOps and Cloud. For a complete explanation:
-                    <a href="https://www.linkedin.com/posts/techops-examples_digital-cloud-raci-matrix-in-the-raci-activity-7249323889325965312-UcNr?utm_source=share&utm_medium=member_android" target="_blank">DevOps RACI Matrix</a>
+                <p>
+                    This table demonstrates a differences between different roles w.r.to DevOps and Cloud. 
+                    For a complete explanation:
+                    <a href="https://www.linkedin.com/posts/techops-examples_digital-cloud-raci-matrix-in-the-raci-activity-7249323889325965312-UcNr?utm_source=share&utm_medium=member_android" target="_blank">
+                        DevOps RACI Matrix
+                    </a>
                 </p>
                 <img src="https://s3.ap-south-1.amazonaws.com/profile.clouddevopsguru.online/devops_raci_matrix.jpg" alt="DevOps RACI Matrix">
             </li>
             <li>
-                <h3>Production Level CI/CD Pipeline</h3>
-                <p>This project demonstrates a full CI/CD pipeline for deploying a web application. For a complete project:
-                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7230785386837422080?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7230785386837422080%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29" target="_blank">Production Level CI/CD Pipeline</a>
+                <h3>Production Level CI/CD Pipeline </h3>
+                <p>
+                    This project demonstrates a full CI/CD pipeline for deploying a web application. 
+                    For a complete project: 
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7230785386837422080?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7230785386837422080%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29" target="_blank">
+                        Production Level CI/CD Pipeline
+                    </a>
                 </p>
                 <img src="https://s3.ap-south-1.amazonaws.com/profile.clouddevopsguru.online/prod_cicd_pipeline.PNG" alt="Production Level CI/CD Pipeline">
             </li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>Downloads</h2>
+    <div class="download-section">
+        <h3>Available Files:</h3>
+        <ul>
+            <li>
+                <a href="https://media.licdn.com/dms/document/media/D4D1FAQHbAo9eULwTow/feedshare-document-pdf-analyzed/0/1728457766133?e=1729728000&v=beta&t=DYj066Kh1jhYSSk7QmowIMVVhFopawknkmShvMXkfvo" download>
+                    <i class="fas fa-download download-icon"></i> Linux Basic Commands (PDF)
+                </a>
+            </li>
+            <li>
+                <a href="https://media.licdn.com/dms/document/media/D561FAQGcTBR79yxf6w/feedshare-document-pdf-analyzed/0/1727769259601?e=1729728000&v=beta&t=oKElLO_xbu-G85snmhlLD7_jm6wj2uaaJKXem28H0to" download>
+                    <i class="fas fa-download download-icon"></i> Linux Interview Question & Answers (PDF)
+                </a>
+            </li>
+            <li>
+                <a href="https://media.licdn.com/dms/document/media/D561FAQGaK96N98tnpQ/feedshare-document-pdf-analyzed/0/1726716608505?e=1729728000&v=beta&t=WmCcx5dvXcbKNrFziQI4al7yt5DVTzfsJx6BuRi9Spc" download>
+                    <i class="fas fa-download download-icon"></i> Python For DevOps (PDF)
+                </a>
+            </li>
+            <li>
+                <a href="https://media.licdn.com/dms/document/media/D561FAQG9ux3lIANXwA/feedshare-document-pdf-analyzed/0/1724049464194?e=1729728000&v=beta&t=S92hYLIBKFhUvmwqgE--BMEQvin1FQTox4MFPFHkAYA" download>
+                    <i class="fas fa-download download-icon"></i> Terraform Interview Questions and anwers (PDF)
+                </a>
+            </li>
+            <li>
+                <a href="https://staticdevopsmeterial.s3.ap-south-1.amazonaws.com/terraform.pdf" download>
+                    <i class="fas fa-download download-icon"></i> Terraform Interview Questions and anwers (PDF)
+                </a>
+            </li>
+            <!-- Add more downloadable files as needed -->
         </ul>
     </div>
 </section>
