@@ -22,7 +22,7 @@ pipeline {
                     aws s3 cp index.html s3://$S3_BUCKET/index.html
                     aws s3 cp assets/ s3://$S3_BUCKET/assets/ --recursive
                     aws s3 cp images/ s3://$S3_BUCKET/images/ --recursive
-                    aws s3 cp download.html s3://$S3_BUCKET/download.html
+                    aws s3 cp downloads.html s3://$S3_BUCKET/downloads.html
 
                     """
 
